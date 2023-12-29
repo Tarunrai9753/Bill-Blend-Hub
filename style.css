@@ -44,15 +44,18 @@ body {
     border-radius: 15px !important;
     background-color: #6ab8bb !important;
     width: 90%;
-    color: #5a5a5a !important;
+    color: #313131 !important;
     font-weight: 500 !important;
     margin-left: 5%;
 }
 
 .inputusername::placeholder {
-    color: #5a5a5a !important;
+    color: #313131 !important;
     font-weight: 500;
 }
 .terms{
     cursor: pointer;
+} 
+.fntfmly{
+    font-family: auto;
 }
