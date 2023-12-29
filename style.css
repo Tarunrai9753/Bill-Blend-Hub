@@ -13,7 +13,7 @@ body {
     top: 0;
     width: 100%;
     height: 100vh;
-    background: black url(./image/Ellipsis-1s-200px.gif) no-repeat center;
+    background: black url(./img/Ellipsis-1s-200px.gif) no-repeat center;
     z-index: 10;
 }
 .wave {
