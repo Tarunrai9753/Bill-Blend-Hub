@@ -1,138 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./image/Icon.png" type="image/x-icon">
-    <title>Login</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>BBH</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
 </head>
+<body>
+    
+<div class="container d-flex justify-content-center">
+    <div class="col-4"><input type="button" value="SUPER ADMIN" class="btn"></div>
+    <div class="col-4"><input type="button" value="ADMIN/VENDOR" class="btn"></div>
 
-<body onload="loading()">
-
-    <!--Loader Start's Here-->
-    <div id="loading" style="display: block;"></div>
-    <!--Loader End's Here-->
-
-    <!--Login Form Start's Here-->
-    <img class="wave" src="img/wave.png">
-    <div class="container">
-        <div class="img">
-            <img src="img/bg.svg">
-        </div>
-        <div class="login-content">
-            <form action="index.html" method="post">
-                <img src="img/avatar.svg">
-                <h2 class="fs-4 adminwel">Welcome, Super Admin</h2>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Username</h5>
-                        <input type="text" class="input" required/> 
-                    </div>
-                </div>
-                <div class="input-div pass">
-                    <div class="i">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Password</h5>
-                        <input type="password" class="input" required/>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-evenly mt-3">
-                    <span><input type="checkbox" > Remember Me </span>
-                    <span><a class="text-dark text-decoration-none" href="#">Forgot Password ?</a></span>
-                </div>
-                <input type="submit" class="btn fw-bold" value="Login">
-                <span><input type="checkbox" required /> <span class="terms" style="font-size: 12px;" data-bs-toggle="modal" data-bs-target="#mod1">I Agree To All The
-                        Terms And Conditions as Set out By
-                        User
-                        Agreement</span> </span>
-
-                        
-            </form>
-        </div>
-    </div>
-
-    </section>
-    <!--Login Form End's Here-->
-
-
-
-    <!--Modal For Terms And Conditions-->
-    <div class="modal fade" id="mod1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white modal-title bg-dark" id="mod2">Terms And Conditions :-
-                </div>
-            </div>
-            <div class="modal-body fw-bold gap-1" style="background-color: #e4e4e4; color:  #36898b; font-size: 13px;">
-                1 Acceptance:
-                By using the app, you agree to these terms. <br>
-
-                2 Registration:
-                Users must create and maintain their accounts responsibly.<br>
-
-                3 Payment:
-                Users are responsible for all charges and agree to payment processor terms.<br>
-
-                4 Orders:
-                Users can place orders, but confirmation depends on availability.<br>
-
-                5 Cancellations and Refunds:
-                Users can cancel orders before confirmation; refunds follow restaurant policies.<br>
-
-                6 Privacy and Security:
-                User data is handled as per the Privacy Policy; users must ensure account security.<br>
-
-                7 Intellectual Property:
-                App content is protected; users cannot reproduce or modify without permission.<br>
-
-                8 User Conduct:
-                Users must not engage in unlawful activities or disrupt the app's functioning.<br>
-
-                9 Termination:
-                The app can terminate accounts for violations; users can terminate accounts as well.<br>
-
-                10 Limitation of Liability:
-                The app is not liable for indirect or consequential damages.<br>
-                11 Changes:
-                The app can modify terms; users are responsible for staying updated.<br>
-
-                12 Governing Law:
-                These terms are governed by the laws of the app's jurisdiction.<br>
-
-                By using the app, you agree to these terms and conditions.
-
-                <div class="pt-2">
-                    <button class="btn btn-dark" data-bs-dismiss="modal">Close T&C.</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Modal For Terms And Conditions-->
-
-
-
-
-
-
-
-    <script src="./loader.js"></script>
-    <script type="text/javascript" src="./loader.js"></script>
-    <script type="text/javascript" src="./login.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+</div>
 
 </body>
-
 </html>
