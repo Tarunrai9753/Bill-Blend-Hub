@@ -1,0 +1,8 @@
+#loading {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 255, 255) url(./img/loadsg.png) no-repeat center;
+    z-index: 10;
+}
