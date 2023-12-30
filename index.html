@@ -5,33 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBH</title>
-    <link rel="stylesheet" href="./css/loaderhp.css">
-    <link rel="icon" href="./css/img/icon.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="./css/loader.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
+    <!-- Add Libre Baskerville font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Libre Baskerville', serif;
+            color: white; /* Change text color to white or any color that fits your design */
+        }
+
+        .card {
+            position: relative;
+            top: 3vh;
+            height: 90vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 15px; /* Adjust border radius as needed */
+            filter: drop-shadow(20px 7px 7px);
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(8px);
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .superadmin::before {
+            background-image: url('./css/img/undraw_slider_re_ch7w.svg'); /* Replace with your actual image path */
+        }
+
+        .admin::before {
+            background-image: url('./css/img/undraw_access_account_re_8spm.svg'); /* Replace with your actual image path */
+        }
+
+        .superadmin,
+        .admin {
+            border: 3px solid transparent; /* Adjust border color as needed */
+            text-align: center;
+            padding: 20px;
+            z-index: 1; /* Ensure text is above the blurred background */
+        }
+
+        h1 {
+            font-weight: bold;
+            color: inherit;
+        }
+
+        .btn {
+            margin-top: 20px; /* Adjust the button position as needed */
+        }
+        #loading {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000000 url(./img/Ellipsis-1s-200px.gif) no-repeat center;
+    z-index: 100;
+}
+    </style>
 </head>
+
 <body onload="loading()">
 
     <!--Loader Start's Here-->
     <div id="loading" style="display: block;"></div>
     <!--Loader End's Here-->
-    <div class="container mt-5 d-flex justify-content-center">
-        <div class="col-4"><a href="./Superuserlogin.html"><input type="button" value="SUPER ADMIN" class="btn btn-primary"></a>
+    <div class="d-md-flex justify-content-evenly">
+
+        <div class="ms-5 ms-md-0 col-10 col-md-4 card superadmin border border-1 border-primary ">
+            <h1 class="text-dark">
+                HELLO, <br> SUPER ADMIN
+            </h1>
+
+            <a href="./Superuserlogin.html">
+                <input type="button" value="Login to Continue" class="btn" style="background-color: rgb(47, 194, 145);">
+            </a>
         </div>
-        <div class="col-4"><a href="#"><input type="button" value="ADMIN/VENDOR" class="btn btn-danger"></a></div>
+
+        <div class="ms-5 ms-md-0 col-10 col-md-4 card admin mt-3 mt-md-0 border border-1 border-danger">
+            <h1 class="text-dark">
+                HELLO, <br> ADMIN
+            </h1>
+
+            <a href="./adminlogin.html">
+                <input type="button" value="Login to Continue" class="btn btn-danger">
+            </a>
+        </div>
 
     </div>
 
-
-
     <script type="text/javascript" src="./js/loader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
