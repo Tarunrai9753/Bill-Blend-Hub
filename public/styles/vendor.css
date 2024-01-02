@@ -42,7 +42,7 @@ h4 {
     
     max-width: 200px;
     min-width: 280px;
-    /* background: var(--bs-dark); */
+   
    background-color: #238b8f;;
 
     transition: all 0.35s ease-in-out;
@@ -157,23 +157,6 @@ a.sidebar-link {
 
 
 
-
-/* Theme Toggler */
-
-
-html[data-bs-theme="light"] .theme-toggle .fa-moon {
-    cursor: pointer;
-    padding: 10px;
-    display: block;
-    font-size: 1.25rem;
-    color: #FFF;
-}
-
-
-
-html[data-bs-theme="light"] .theme-toggle .fa-sun {
-    display: none;
-}
 
 
 
