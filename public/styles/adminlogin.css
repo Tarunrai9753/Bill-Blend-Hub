@@ -3,33 +3,6 @@ body {
   background-color: #fff;
 }
 
-p {
-  color: #b3b3b3;
-  font-weight: 300;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-
-
-h2 {
-  font-size: 20px;
-}
 
 .half,
 .half .container > .row {
@@ -43,7 +16,7 @@ h2 {
 }
 
 .half .contents {
-  background: #f6f7fc;
+  background: #d9dbda6b;
 }
 
 .half .contents,
@@ -54,122 +27,33 @@ h2 {
   .half .contents,
   .half .bg {
     width: 100%;
+    height: 100vh;
   }
 }
-.half .contents .form-control,
-.half .bg .form-control {
-
-  border-radius: rem;
-  height: 54px;
- 
-
-}
 
 
 
-.half a {
-  color: #888;
-  text-decoration: underline;
-}
 
-.half .btn {
-  height: 54px;
-  padding-left: 50px;
-  padding-right: 30px;
-}
-
-.half .forgot-pass {
-  position: relative;
-  top: 2px;
-  font-size: 14px;
-}
-
-.control {
-  display: block;
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  font-size: 14px;
-}
-.control .caption {
-  position: relative;
-  top: 0.2rem;
-  color: #888;
-}
-
-.control input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.control__indicator {
-  position: absolute;
-  top: 2px;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background: #e6e6e6;
-  border-radius: 4px;
-}
-
-
-
-.control input:checked ~ .control__indicator {
-  background: #ee2a07f8;
-}
-
-.red:hover {
-  color: red;
-}
-/* logo */
-
-.mains {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: "Dancing Script", cursive; /* Set the font for the entire body */
-}
 .hello {
   font-family: "Dancing Script", cursive; /* Set the font for the entire body */
 }
 
 #logo {
-  text-align: center;
-
+ padding-right: 40%;
+ text-align: center;
+ font-family: "Dancing Script", cursive; /* Set the font for #bbh specifically */
 
 }
 
 #bbh {
   font-size: 100px;
   font-weight: bold;
-  color: red;
+  color: #32BE8F;
   font-family: "Dancing Script", cursive; /* Set the font for #bbh specifically */
 }
 
 #hub {
   font-size: 50px;
-  color: red;
+  color: #32BE8F;
   font-family: "Dancing Script", cursive; /* Set the font for the entire body */
-}
-.peopleimg{
-  filter: blur(6px);
-}
-.peopleimg::before {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.85;
-  z-index: -1;
-  content: " ";
-  background-image: url(./img/undraw_people_re_8spw.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
