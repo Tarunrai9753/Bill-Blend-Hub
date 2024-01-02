@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard</title>
+    <link rel="icon" href="./public/css/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+     <!-- Material Icons -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./public/styles/admin.css">
+    <link rel="stylesheet" href="./public/styles/loadersupadm.css">
+    <link rel="stylesheet" href="./public/styles/onboardsuperadmin.css">
+
+</head>
+
+<body onload="loading()">
+
+    <!--Loader Start's Here-->
+    <div id="loading" style="display: block;"></div>
+    <!--Loader End's Here-->
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <img style="width: 120px; height: 85px;" src="./public/styles/img/B.B.H.png" alt="">
+                    <!-- <a href="#">  </a> -->
+                </div>
+                <ul class="sidebar-nav">
+                   
+                    <li class="sidebar-item">
+                        <a href="./superadmindashboard.html" class="sidebar-link">
+                            <i class="fa-solid fa-list pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
+                            User management
+                        </a>
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="./AddAdmin SuperAdmin Dashboard.html" class="sidebar-link">Add Admin</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Add Vendor</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Manage User</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+                            aria-expanded="false">   <i class="fa-solid fa-sliders pe-2"></i>
+                            Subscription Management 
+                        </a>
+                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="./AddPackage.html" class="sidebar-link">Add Package</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="./subscription user.html" class="sidebar-link">User</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="./subscription manageuser.html" class="sidebar-link">Manage User</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
+                            CRM
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="./table.html" class="sidebar-link"> Raised Ticket  </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">page 2</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">pade 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
+                            Promotion
+                        </a>
+                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
+                                    data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
+
+                                    <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
+                                    data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
+
+                                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
+
+                                 
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="./public/styles/img/icons8-management-50.png" class="avatar img-fluid rounded" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#" class="dropdown-item">Profile</a>
+                                <a href="#" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+           
+
+
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+                    <div class="mb-3">
+                        <h4>Hello Super-Admin Dashboard</h4>
+                    </div>
+                    <!----===================Onboarding===========================-->
+                    <section>
+                        <div class="container mt-5">
+                            <div class="progress px-1" style="height: 3px;">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="step-container d-flex justify-content-between">
+                                <div class="step-circle" onclick="displayStep(1)">1</div>
+                                <div class="step-circle" onclick="displayStep(2)">2</div>
+                                <div class="step-circle" onclick="displayStep(3)">3</div>
+                            </div>
+
+                            <form id="multi-step-form" novalidate class="needs-validation">
+                                <div class="step step-1">
+                                    <!-- Step 1 form fields here -->
+
+                                    <!--Trade Owner Details-->
+
+
+
+                                    <h3 class="fw-bold"><span>#</span> BASIC INFORMATION</h3>
+                                    <div class="mb-3 ">
+                                        <span class="mt-3">
+                                            <label for="tradename" class="form-label pt-1 fs-5 ">Trade Name :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold form-control text-center" id="tradename"
+                                                placeholder="Enter Trade's Name" required />
+                                            <label for="tradename" class="form-label fs-5  pt-1">Owner Name :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold  form-control text-center" id="ownername"
+                                                placeholder="Enter Your Name" required />
+
+                                            <label for="tradename" class="form-label pt-1 fs-5 ">Trade's E-mail
+                                                :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold form-control text-center" id="tradeemail"
+                                                placeholder="Enter Your E-mail" required />
+                                            <label for="tradetype" class="form-label fs-5  pt-1">Trade's Type
+                                                :-</label>
+                                            <input type="text" name="tradetype"
+                                                class="w-100 fw-bold  form-control text-center" id="tradecontactno"
+                                                placeholder="Specify" required />
+                                        </span>
+
+
+                                    </div>
+                                    <!--Trade Owner Details-->
+
+
+
+                                    <!--Company Details-->
+
+                                    <h3 class="fw-bold"> <span>#</span> Company Details</h3>
+                                    <div class="mb-3 ">
+                                        <span class="mt-3">
+                                            <label for="tradename" class="form-label pt-1  fs-5">Company's Name
+                                                :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold  form-control text-center" id="cname"
+                                                placeholder="Enter Company's Name" required />
+                                            <label for="tradename" class="form-label  fs-5 pt-1">Company's Owner Name
+                                                :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold  form-control text-center" id="coname"
+                                                placeholder="Enter Your Name" required />
+
+                                            <label for="tradename" class="form-label pt-1  fs-5">Company E-mail
+                                                :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold form-control text-center" id="cemail"
+                                                placeholder="Enter Company E-mail" required />
+                                            <label for="tradename" class="form-label pt-1  fs-5">Company Website
+                                                :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold form-control text-center" id="cweb"
+                                                placeholder="Enter Company Website if Have ?" required />
+
+
+                                            <label for="tradename" class="form-label pt-1  fs-5">Company Address
+                                                :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold form-control text-center" id="caddress"
+                                                placeholder="Enter Company Address" required />
+
+                                        </span>
+                                    </div>
+
+                                    <!--Company Details-->
+
+
+
+                                    <!--Terms and Conditions-->
+                                    <h3 class="mt-4"><span>#</span> Payments Terms</h3>
+                                    <div class="mb-3 ">
+                                        <span>
+
+
+                                            <h5 class=" mt-3">"Seamless Money Transactions: Elevate Your Food Billing
+                                                App with Effortless Payment Acceptance Across Multiple Platforms for
+                                                Ultimate User Convenience."</h5>
+
+                                            <span><br>
+                                                <span class="fw-bold fs-6">
+                                                    1. Credit/Debit Cards :-</span>This is a standard and widely used
+                                                method.
+                                                Integrate a secure payment gateway that supports major credit and debit
+                                                cards. Popular options include Stripe, PayPal, or Braintree. Ensure that
+                                                your app complies with the necessary security standards, such as PCI
+                                                DSS, to protect users' sensitive information.
+                                                <br> <br> <span class="fw-bold fs-6">2. Digital Wallets :-</span>
+
+                                                Allow users to make payments using digital wallets like Apple Pay,
+                                                Google Pay, or Samsung Pay. Digital wallets provide a quick and secure
+                                                way for users to complete transactions using their stored card
+                                                information or linked bank accounts.
+                                                <br><br> <span class="fw-bold fs-6"> 3. In-App Wallets :-</span>
+
+                                                Implement an in-app wallet system that users can preload with funds.
+                                                Users can add money to their app wallet using various methods like bank
+                                                transfers, credit/debit cards, or even cryptocurrency. This approach can
+                                                enhance user experience by reducing the need for repetitive card details
+                                                input.
+
+                                                <br><br> <span class="fw-bold fs-6"> 4. UPI (Unified Payments Interface)
+                                                    :-</span>
+
+                                                If your app caters to markets where UPI is popular (e.g., India),
+                                                integrate UPI as a payment option. Users can link their bank accounts to
+                                                the app, allowing seamless, real-time bank-to-bank transfers. This
+                                                method is especially relevant in regions where mobile banking is
+                                                prevalent. <br><br>
+                                            </span>
+
+
+                                            <!-- Modal Button -->
+                                            <span class="d-flex">
+                                                <input type="checkbox" class="form-check-input" required />
+                                                <a data-bs-toggle="modal" data-bs-target="#mod1" class="ms-2">I Agree To
+                                                    All The
+                                                    Terms And Conditions as Set out By
+                                                    User
+                                                    Agreement</a></span>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="mod1">
+                                                <div class="modal-dialog bg-black text-secondary widthmodal">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header bg-black text-white modal-title"
+                                                            id="mod2">Terms And Condition Read Before Agree to all the
+                                                            Terms and Conditions !</div>
+
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            1. Payment Methods :- The app accepts payment through
+                                                            various methods,
+                                                            including credit cards, debit cards, and other electronic
+                                                            payment
+                                                            options. <br>
+
+                                                            2. Billing Information Accuracy :- Users are responsible for
+                                                            providing
+                                                            accurate billing information, and any discrepancies should
+                                                            be promptly
+                                                            updated within the app.<br>
+
+                                                            3. Charges and Invoices :- Users are responsible for all
+                                                            charges
+                                                            incurred through the app, and invoices will be generated for
+                                                            each
+                                                            transaction.<br>
+
+                                                            4. Subscription Terms (if applicable) :- If the app offers
+                                                            subscription
+                                                            plans, users will be provided with details on the terms,
+                                                            including
+                                                            renewal conditions.<br>
+
+                                                            4. One-Time Payments :- One-time payments are applicable for
+                                                            specific
+                                                            food orders or services and are processed at the time of the
+                                                            transaction.<br>
+
+                                                            5. Invoice Delivery :- Invoices will be delivered to users
+                                                            via email,
+                                                            app notifications, or through the app interface, depending
+                                                            on the user's
+                                                            preferences.<br>
+
+                                                            6. Late Payment Fees :- Late payment fees may be charged for
+                                                            overdue
+                                                            payments, and users are encouraged to make timely payments
+                                                            to avoid
+                                                            additional charges.<br>
+
+                                                            7. Refund Policy :- Refunds may be issued under specific
+                                                            conditions,
+                                                            such as order cancellation within a certain timeframe or in
+                                                            case of
+                                                            quality issues with the food.<br>
+
+                                                            8. Currency :- All transactions are processed in the
+                                                            currency specified
+                                                            within the app, and users should be aware of the applicable
+                                                            exchange
+                                                            rates if using foreign currencies.<br>
+
+                                                            9. Security Measures :- The app employs security measures to
+                                                            protect
+                                                            user payment information, and users are advised to keep
+                                                            their login
+                                                            details confidential.<br>
+
+                                                            10. Cancellation Policy :- Users should review and
+                                                            understand the app's
+                                                            cancellation policy, including any associated fees or
+                                                            conditions for
+                                                            canceling food orders.<br>
+
+                                                            11. Compliance with Laws :- Users agree to comply with all
+                                                            relevant laws
+                                                            and regulations regarding online transactions and
+                                                            payments.<br>
+
+                                                            12. Termination of Services :- The app reserves the right to
+                                                            terminate
+                                                            services in cases of non-payment or violation of terms.<br>
+
+                                                            13. Change in Terms :-The app may update its terms and
+                                                            conditions, and
+                                                            users will be notified of any changes. Continued use of the
+                                                            app implies
+                                                            acceptance of the updated terms.<br>
+
+                                                            14. Dispute Resolution :- Users agree to follow the
+                                                            specified dispute
+                                                            resolution process in the event of payment-related
+                                                            issues.<br>
+
+                                                            15. Force Majeure :- The app is not liable for disruptions
+                                                            or delays in
+                                                            services caused by unforeseen circumstances (force
+                                                            majeure).<br>
+                                                            Confidentiality:
+
+                                                            User payment information is treated confidentially, and
+                                                            users are
+                                                            expected to respect the privacy of their login details.<br>
+                                                        </p>
+                                                        <div class="modal-footer text-center" style="height: 50px;">
+                                                            <button class="btn float-end" data-bs-dismiss="modal"
+                                                                style="color: white;">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Don't go past here -->
+
+                                        </span>
+                                        <!--Terms and Conditions-->
+
+                                    </div>
+
+
+
+
+
+                                    <button type="button" class="btn btn-primary next-step mb-3">Next</button>
+                                </div>
+
+
+
+
+
+
+
+   <!--KYC Details-->
+                                <div class="step step-2">
+                                    <!-- Step 2 form fields here -->
+                                    <h3>#KYC</h3>
+                                    <div class="mb-3">
+
+
+
+
+                                        <span class="mt-3">
+                                            <label for="aadharname" class="form-label fs-5  pt-1">Aadhar Holder Name
+                                                :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold  form-control text-center" id="ownername"
+                                                placeholder="Enter Aadhar Name" required />
+                                            <label for="aadhar" class="form-label pt-1 fs-5 ">Aadhar Number :-</label>
+                                            <input type="number" name="aadharname"
+                                                class="w-100 fw-bold form-control text-center" id="aadharn"
+                                                placeholder="Enter Aadhar Number" required />
+
+
+
+
+                                            <span class=" mb-2">
+                                                <h5 class=" mt-3">Aadhar Front :-</h5>
+                                                <div class="mt-2 mb-2 text-center"
+                                                    style="display: grid; place-items: center;">
+                                                    <img class="adhrimg mx-2 border border-3 border-danger" src=""
+                                                        alt="" />
+                                                    <input class="mx-2 ps-5 py-2" type="file"
+                                                        onchange="updateImage(this, 0)" />
+                                                </div>
+                                            </span>
+
+
+                                            <span class="mt-2">
+                                                <h5 class="">Aadhar Back :-</h5>
+                                                <div class="mt-2 mb-2" style="display: grid; place-items: center;">
+                                                    <img class="adhrimg mx-2 border border-3 border-danger" src=""
+                                                        alt="" />
+                                                    <input class="mx-2 ps-5 py-2" type="file"
+                                                        onchange="updateImage(this, 1)" />
+                                                </div>
+                                            </span>
+                                        </span>
+
+                                    </div>
+
+
+
+
+
+                                    <h3># Company KYC</h3>
+                                    <div class="mb-3">
+
+
+
+
+                                        <span class="mt-3">
+                                            <label for="aadharname" class="form-label fs-5  pt-1">Aadhar Holder Name
+                                                :-</label>
+                                            <input type="text" name="tradename"
+                                                class="w-100 fw-bold  form-control text-center" id="ownername"
+                                                placeholder="Enter Aadhar Name" required />
+                                            <label for="aadhar" class="form-label pt-1 fs-5 ">Aadhar Number :-</label>
+                                            <input type="number" name="aadharname"
+                                                class="w-100 fw-bold form-control text-center" id="aadharn"
+                                                placeholder="Enter Aadhar Number" required />
+
+
+
+
+                                            <span class=" mb-2">
+                                                <h5 class=" mt-3">Aadhar Front :-</h5>
+                                                <div class="mt-2 mb-2 text-center"
+                                                    style="display: grid; place-items: center;">
+                                                    <img class="adhrimg mx-2 border border-3 border-danger" src=""
+                                                        alt="" />
+                                                    <input class="mx-2 ps-5 py-2" type="file"
+                                                        onchange="updateImage(this, 2)" />
+                                                </div>
+                                            </span>
+
+
+                                            <span class="mt-2">
+                                                <h5 class="">Aadhar Back :-</h5>
+                                                <div class="mt-2 mb-2" style="display: grid; place-items: center;">
+                                                    <img class="adhrimg mx-2 border border-3 border-danger" src=""
+                                                        alt="" />
+                                                    <input class="mx-2 ps-5 py-2" type="file"
+                                                        onchange="updateImage(this, 3)" />
+                                                </div>
+                                            </span>
+                                        </span>
+
+                                    </div>
+
+
+
+
+                                    <h3># PAN</h3>
+                                    <div class="mb-3">
+
+
+
+
+                                        <span class="mt-3">
+                                            <label for="pancardname" class="form-label fs-5  pt-1">PAN Holder Name
+                                                :-</label>
+                                            <input type="text" name="pancardname"
+                                                class="w-100 fw-bold  form-control text-center" id="panname"
+                                                placeholder="Enter PAN Holder Name" required />
+                                            <label for="pancardnumber" class="form-label pt-1 fs-5 ">PAN Card Number :-</label>
+                                            <input type="number" name="pancardnumber"
+                                                class="w-100 fw-bold form-control text-center" id="aadharn"
+                                                placeholder="Enter PAN Card Number" required />
+
+
+
+
+                                            <span class=" mb-2">
+                                                <h5 class=" mt-3">PAN Front :-</h5>
+                                                <div class="mt-2 mb-2 text-center"
+                                                    style="display: grid; place-items: center;">
+                                                    <img class="adhrimg mx-2 border border-3 border-danger" src=""
+                                                        alt="" />
+                                                    <input class="mx-2 ps-5 py-2" type="file"
+                                                        onchange="updateImage(this, 4)" />
+                                                </div>
+                                            </span>
+
+
+                                            <span class="mt-2">
+                                                <h5 class="">PAN Back :-</h5>
+                                                <div class="mt-2 mb-2" style="display: grid; place-items: center;">
+                                                    <img class="adhrimg mx-2 border border-3 border-danger" src=""
+                                                        alt="" />
+                                                    <input class="mx-2 ps-5 py-2" type="file"
+                                                        onchange="updateImage(this, 5)" />
+                                                </div>
+                                            </span>
+                                        </span>
+
+                                    </div>
+
+
+
+
+
+
+
+                                    <h3># GST</h3>
+                                    <div class="mb-3">
+
+
+
+
+                                        <span class="mt-3">
+                                            <label for="gstname" class="form-label fs-5  pt-1">GST COMPANY NAME
+                                                :-</label>
+                                            <input type="text" name="gstname"
+                                                class="w-100 fw-bold  form-control text-center" id="gstname"
+                                                placeholder="Enter Company Name" required />
+                                            <label for="gstnumber" class="form-label pt-1 fs-5 ">GST Number :-</label>
+                                            <input type="number" name="gstnumber"
+                                                class="w-100 fw-bold form-control text-center" id="gstnum"
+                                                placeholder="Enter GST Number" required />
+                                           
+                                        </span>
+
+                                    </div>
+
+
+
+
+                                    <h3># FSSI</h3>
+                                    <div class="mb-3">
+
+
+
+
+                                        <span class="mt-3">
+                                            <label for="fssi" class="form-label fs-5  pt-1">FSSI NUMBER
+                                                :-</label>
+                                            <input type="text" name="fssi"
+                                                class="w-100 fw-bold  form-control text-center" id="fssinum"
+                                                placeholder="Enter FSSI Number" required />
+                                           
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <!--KYC Details-->
+
+
+
+
+
+                                    <button type="button" class="btn btn-primary prev-step">Previous</button>
+                                    <button type="button" class="btn btn-primary next-step">Next</button>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="step step-3">
+                                    <!-- Step 3 form fields here -->
+
+                                    <h3><span>#</span> BASIC INFORMATION</h3>
+                                    <div class="mb-3 gap-3">
+
+                                        <span class=" mt-5 mb-2">
+                                            <label for="Username" class="form-label fw-bold fs-5">Username Name
+                                                :-</label>
+                                            <input type="text" name="Username" class=" form-control text-center"
+                                                id="usnm" placeholder="Enter Your Username" required />
+                                        </span>
+
+                                        <span class=" mt-3 mb-2">
+                                            <label for="email" class="form-label fw-bold fs-5">E-Mail
+                                                :-</label>
+                                            <input type="email" name="email" class=" form-control text-center" id="emlg"
+                                                placeholder="Enter Your E-mail" required />
+                                        </span>
+
+                                        <span class=" mt-3 mb-2 ">
+                                            <label for="Crtpassw" class="form-label fw-bold fs-5">Create Password
+                                                :-</label>
+                                            <input type="password" name="Crtpassw" class=" form-control text-center"
+                                                id="crtpass" placeholder="Type Your Password" required />
+                                        </span>
+
+                                        <span class=" mt-3 mb-2">
+                                            <label for="cnfpass" class="form-label fw-bold fs-5">Confirm Password
+                                                :-</label>
+                                            <input type="password" name="cnfpass" class=" form-control text-center"
+                                                id="cnfmpassw" placeholder="Confirm Your Password" required />
+                                        </span>
+
+
+                                    </div>
+                                    <div class="d-flex justify-content-evenly mt-4">
+                                        <button type="button" class="btn btn-primary prev-step">Previous</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+
+
+      <!-- End Main -->
+            </section>
+             <!----===================card 3 end===========================-->
+               <!----1 end main--> </main>
+
+
+            <!--================start dark and light ===========-->
+            <a href="#" class="theme-toggle">
+                <!-- You can remove the moon and sun icons since the theme is always light -->
+            </a>
+        <!--================end dark and light ===========-->
+
+  <footer class="footer">
+    <div class="container-fluid">
+        <div class="row text-muted">
+            <div class="col-6 text-start">
+                <p class="mb-0">
+                    <a href="#" class="text-muted">
+                        <strong>Copyright © 2023 All rights reserved.</strong>
+                    </a>
+                </p>
+            </div>
+            <div class="col-6 text-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-muted">Contact</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-muted">About Us</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-muted">Terms</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-muted">Booking</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+</div>
+<script>
+    function updateImage(input, index) {
+        const image = document.querySelectorAll(".adhrimg")[index];
+        image.src = URL.createObjectURL(input.files[0]);
+    }
+</script>
+<script>
+
+    const form = document.querySelector('.needs-validation');
+
+    form.addEventListener('submit', (e) => {
+        if (!form.checkValidity()) {
+            e.preventDefault();
+        } else {
+            alert('Successfully Submitted');
+        }
+
+        form.classList.add('was-validated');
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="text/javascript" src="./js/loader.js"></script>
+<script type="text/javascript" src="./js/OnboardingSuperadmin.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/Superadmin.js"></script>
+
+
+</body>
+
+</html>
