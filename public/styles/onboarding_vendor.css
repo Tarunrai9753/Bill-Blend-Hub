@@ -108,3 +108,9 @@ to {
 .butn:hover{
     background-color: #238b8f;
 }
+.uploadpic {
+  height: 80px;
+  width: 120px;
+  object-fit: contain;
+  background: #000000;
+  }
